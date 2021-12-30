@@ -1,13 +1,14 @@
 const express = require('express')
 //const cors = require('cors')
 
-//const db = require('./database/db')
+const db = require('./database/db')
 const routes = require('./routes/routes')
 
 const app = express()
 
-// conexão com o banco de dados
-//db.connect()
+// conexão com o banco de dados sql server
+db.connection.connect()
+db.connection.executeStatement()
 
 // habilita CORS
 /*const allowedOrigins = [
